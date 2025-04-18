@@ -1,0 +1,10 @@
+# ninja log v5
+1	13683	1744616317861833345	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool/src/bev_pooling_hip.o	3b307255a4bab459
+1	13706	1744616317877833251	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool/src/bev_sum_pool_hip.o	388a1fcfd9b5839b
+0	13714	1744616317893833158	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool/src/bev_max_pool_hip.o	ce3a4a5fd19bf93b
+1	100615	1744616404765316650	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool/src/bev_sum_pool_hip_hip.o	24312df70c4eaa60
+0	100690	1744616404837316217	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool/src/bev_max_pool_hip_hip.o	6230d59d485da07c
+4	6288	1744616411517276080	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool_v2/src/bev_pool_hip_hip.o	14156db40faae7c3
+4	13784	1744616419017230949	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/bev_pool_v2/src/bev_pool_hip.o	fe56b7927bfdce19
+4	6196	1744616425561191513	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/nearest_assign/src/nearest_assign_hip_hip.o	cea297ea5d652c12
+4	13645	1744616433013146541	/home/mingjiel/git_repo/FlashOCC/projects/build/temp.linux-x86_64-cpython-39/home/mingjiel/git_repo/FlashOCC/projects/mmdet3d_plugin/ops/nearest_assign/src/nearest_assign_hip.o	d1e2147b9ecb7fe7

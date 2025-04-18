@@ -1,0 +1,4 @@
+# ninja log v5
+1	3762	1744617869671598284	/home/mingjiel/git_repo/Deformable-DETR/models/ops/build/temp.linux-x86_64-3.9/home/mingjiel/git_repo/Deformable-DETR/models/ops/src/cpu/ms_deform_attn_cpu_hip.o	639c095e3c8e0dcd
+1	13408	1744617879319489196	/home/mingjiel/git_repo/Deformable-DETR/models/ops/build/temp.linux-x86_64-3.9/home/mingjiel/git_repo/Deformable-DETR/models/ops/src/vision_hip.o	d70d04f3c53edc28
+1	54609	1744617920503031169	/home/mingjiel/git_repo/Deformable-DETR/models/ops/build/temp.linux-x86_64-3.9/home/mingjiel/git_repo/Deformable-DETR/models/ops/src/hip/ms_deform_attn_hip.o	4aaf687bfd5ba42f

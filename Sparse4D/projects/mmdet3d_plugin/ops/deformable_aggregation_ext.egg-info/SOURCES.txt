@@ -1,0 +1,7 @@
+setup.py
+/home/mingjiel/git_repo/Sparse4D/projects/mmdet3d_plugin/ops/src/deformable_aggregation_hip.cpp
+/home/mingjiel/git_repo/Sparse4D/projects/mmdet3d_plugin/ops/src/deformable_aggregation_hip_hip.hip
+deformable_aggregation_ext.egg-info/PKG-INFO
+deformable_aggregation_ext.egg-info/SOURCES.txt
+deformable_aggregation_ext.egg-info/dependency_links.txt
+deformable_aggregation_ext.egg-info/top_level.txt
