@@ -84,6 +84,39 @@ bash prepare_nuscenes.sh
 bash run_centerpoint.sh
 ```
 
+## PointPillars
+
+1. Dataset preparation
+- Check and follow the instruction in `prepare_nuscenes.sh` to set related variables properly and then run the sctipt to prepare the nuScenes dataset.
+- It will take a long time (a few hours) to download and process the dataset.
+```bash
+bash prepare_nuscenes.sh
+```
+2. Model training
+- Set config file, working directory properly, GPU numbers in `run_pointpillars.sh` then execute it for training.
+```bash
+bash run_pointpillars.sh
+```
+
+3. Issues
+- You will meet the following error under the docker of torch2.7/mmcv1.7.1/mmdet2.26.0/mmdet3d1.0.0rc4, try the solution provided below.
+```
+Error Messages:
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1654, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/mmopenlab/mmcv/mmcv/parallel/distributed.py", line 160, in _run_ddp_forward
+[rank0]:     self._use_replicated_tensor_module else self.module
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1938, in getattr
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'MMDistributedDataParallel' object has no attribute '_use_replicated_tensor_module'
+
+Solution:
+Replace the orifinal line160 of mmcv/mmcv/parallel/distributed.py with the modified version.
+Original: self._use_replicated_tensor_module else self.module
+Modified: getattr(self, '_use_replicated_tensor_module', False) else self.module
+
+````
+
 ## Mask2Former
 
 1. Dataset preparation
