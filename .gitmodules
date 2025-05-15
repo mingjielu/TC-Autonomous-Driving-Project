@@ -1,0 +1,3 @@
+[submodule "resnet50/vision"]
+	path = resnet50/vision
+	url = https://github.com/pytorch/vision
