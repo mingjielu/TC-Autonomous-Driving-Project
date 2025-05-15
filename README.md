@@ -19,6 +19,7 @@ mv nearest_assign/src/nearest_assign_cuda.cu nearest_assign/src/nearest_assign_h
 ````
 #dvr = load("dvr", sources=["lib/dvr/dvr.cpp", "lib/dvr/dvr.cu"], verbose=True, extra_cuda_cflags=['-allow-unsupported-compiler'])
 dvr = load("dvr", sources=["lib/dvr/dvr.cpp", "lib/dvr/dvr.cu"], verbose=True, extra_cuda_cflags=[])
+````
 6. Modify the cuda interface specially for torch2.7
 ````
 lib/dvr/dvr.cu L371: sigma.type() -> sigma.scalar_type()
