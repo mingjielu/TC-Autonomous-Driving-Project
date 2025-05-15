@@ -220,7 +220,7 @@ custom_hooks = [
 ]
 
 load_from = "ckpts/bevdet-r50.pth"
-# fp16 = dict(loss_scale='dynamic')
+fp16 = dict(loss_scale='dynamic')
 evaluation = dict(interval=1, start=20, pipeline=test_pipeline)
 checkpoint_config = dict(interval=1, max_keep_ckpts=5)
 

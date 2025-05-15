@@ -35,6 +35,11 @@ or
 python setup.py build install
 ```
 - Install GKT:
+Modify the cuda interface specially for torch2.7
+````
+projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.cu L56: value.type() -> value.scalar_type()
+projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.cu L125: value.type() -> value.scalar_type()
+````
 ```bash
 cd /path/to/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn
 python setup.py build install

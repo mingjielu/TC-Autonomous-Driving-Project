@@ -172,14 +172,43 @@ class LSSViewTransformer(BaseModule):
         Returns:
             torch.tensor: Point coordinates in shape (B, N, D, fH, fW, 3)
         """
-        B, N, _, _ = sensor2ego.shape
+        #B, N, _, _ = sensor2ego.shape
 
-        # post-transformation
-        # (D, fH, fW, 3) - (B, N, 1, 1, 1, 3) --> (B, N, D, fH, fW, 3)
+        ## post-transformation
+        ## (D, fH, fW, 3) - (B, N, 1, 1, 1, 3) --> (B, N, D, fH, fW, 3)
+        #points = self.frustum.to(sensor2ego) - post_trans.view(B, N, 1, 1, 1, 3)
+        ## (B, N, 1, 1, 1, 3, 3) @ (B, N, D, fH, fW, 3, 1)  --> (B, N, D, fH, fW, 3, 1)
+        #points = torch.inverse(post_rots).view(B, N, 1, 1, 1, 3, 3)\
+        #    .matmul(points.unsqueeze(-1))
+        ## cam_to_ego
+        ## (B, N_, D, fH, fW, 3, 1)  3: (du, dv, d)
+        #points = torch.cat(
+        #    (points[..., :2, :] * points[..., 2:3, :], points[..., 2:3, :]), 5)
+        ## R_{c->e} @ K^-1
+        #combine = sensor2ego[:, :, :3, :3].matmul(torch.inverse(cam2imgs))
+        ## (B, N, 1, 1, 1, 3, 3) @ (B, N, D, fH, fW, 3, 1)  --> (B, N, D, fH, fW, 3, 1)
+        ## --> (B, N, D, fH, fW, 3)
+        #points = combine.view(B, N, 1, 1, 1, 3, 3).matmul(points).squeeze(-1)
+        ## (B, N, D, fH, fW, 3) + (B, N, 1, 1, 1, 3) --> (B, N, D, fH, fW, 3)
+        #points += sensor2ego[:, :, :3, 3].view(B, N, 1, 1, 1, 3)
+
+        ## (B, 1, 1, 1, 3, 3) @ (B, N, D, fH, fW, 3, 1) --> (B, N, D, fH, fW, 3, 1)
+        ## --> (B, N, D, fH, fW, 3)
+        #points = bda.view(B, 1, 1, 1, 1, 3,
+        #                  3).matmul(points.unsqueeze(-1)).squeeze(-1)
+
+
+
+
+        B, N, _, _ = sensor2ego.shape
         points = self.frustum.to(sensor2ego) - post_trans.view(B, N, 1, 1, 1, 3)
         # (B, N, 1, 1, 1, 3, 3) @ (B, N, D, fH, fW, 3, 1)  --> (B, N, D, fH, fW, 3, 1)
-        points = torch.inverse(post_rots).view(B, N, 1, 1, 1, 3, 3)\
-            .matmul(points.unsqueeze(-1))
+        #points = torch.inverse(post_rots).view(B, N, 1, 1, 1, 3, 3)\
+        #    .matmul(points.unsqueeze(-1))   # points old
+        B,N,D,H,W,_ = points.shape
+        points = points.view(B*N,D*H*W,3).permute(0,2,1) # B*N,3,D*H*W
+        points = torch.inverse(post_rots).view(B*N,3, 3).matmul(points) # (B*N, 3, 3) @ (B*N， 3, D* fH* fW) --> (B*N, 3, D* fH* fW)
+        points = points.permute(0,2,1).view(B,N,D,H,W,3,1).contiguous() # B,N,D,H,W,3,1
 
         # cam_to_ego
         # (B, N_, D, fH, fW, 3, 1)  3: (du, dv, d)
@@ -189,14 +218,21 @@ class LSSViewTransformer(BaseModule):
         combine = sensor2ego[:, :, :3, :3].matmul(torch.inverse(cam2imgs))
         # (B, N, 1, 1, 1, 3, 3) @ (B, N, D, fH, fW, 3, 1)  --> (B, N, D, fH, fW, 3, 1)
         # --> (B, N, D, fH, fW, 3)
-        points = combine.view(B, N, 1, 1, 1, 3, 3).matmul(points).squeeze(-1)
+        #points = combine.view(B, N, 1, 1, 1, 3, 3).matmul(points).squeeze(-1)  # points old
+        points = points.squeeze(-1).view(B*N,D*H*W,3).permute(0,2,1) # B*N,3,D*H*W
+        points = combine.reshape(-1 ,3, 3).matmul(points) # (B*N, 3, 3) @ (B*N， 3, D* fH* fW) --> (B*N, 3, D* fH* fW)
+        points = points.permute(0,2,1).reshape(B,N,D,H,W,3).contiguous() # B,N,D,H,W,3
         # (B, N, D, fH, fW, 3) + (B, N, 1, 1, 1, 3) --> (B, N, D, fH, fW, 3)
         points += sensor2ego[:, :, :3, 3].view(B, N, 1, 1, 1, 3)
 
         # (B, 1, 1, 1, 3, 3) @ (B, N, D, fH, fW, 3, 1) --> (B, N, D, fH, fW, 3, 1)
         # --> (B, N, D, fH, fW, 3)
-        points = bda.view(B, 1, 1, 1, 1, 3,
-                          3).matmul(points.unsqueeze(-1)).squeeze(-1)
+        #points = bda.view(B, 1, 1, 1, 1, 3, 3).matmul(points.unsqueeze(-1)).squeeze(-1)  # points old
+        points = points.view(B*N,D*H*W,3).permute(0,2,1) # B*N,3,D*H*W
+        points = bda.unsqueeze(1).repeat(1,N,1,1).view(B*N,3,3).matmul(points) # (B*N, 3, 3) @ (B*N， 3, D* fH* fW) --> (B*N, 3, D* fH* fW)
+        points = points.permute(0,2,1).view(B,N,D,H,W,3).contiguous() # B,N,D,H,W,3
+
+
         return points
 
     def init_acceleration_v2(self, coor):

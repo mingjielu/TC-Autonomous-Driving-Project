@@ -54,7 +54,7 @@ at::Tensor geometric_kernel_attn_cuda_forward(
     for (int n = 0; n < batch/im2col_step_; ++n)
     {
         auto columns = output_n.select(0, n);
-        AT_DISPATCH_FLOATING_TYPES(value.type(), "multiscale_kernel_attn_forward_cuda", ([&] {
+        AT_DISPATCH_FLOATING_TYPES(value.scalar_type(), "multiscale_kernel_attn_forward_cuda", ([&] {
           multiscale_kernel_attn_forward_cuda(at::hip::getCurrentHIPStreamMasqueradingAsCUDA(),
                 value.data<scalar_t>() + n * im2col_step_ * per_value_size,
                 spatial_shapes.data<int64_t>(),
@@ -123,7 +123,7 @@ std::vector<at::Tensor> geometric_kernel_attn_cuda_backward(
     for (int n = 0; n < batch/im2col_step_; ++n)
     {
         auto grad_output_g = grad_output_n.select(0, n);
-        AT_DISPATCH_FLOATING_TYPES(value.type(), "multiscale_kernel_attn_backward_cuda", ([&] {
+        AT_DISPATCH_FLOATING_TYPES(value.scalar_type(), "multiscale_kernel_attn_backward_cuda", ([&] {
           multiscale_kernel_attn_backward_cuda(at::hip::getCurrentHIPStreamMasqueradingAsCUDA(),
                                     grad_output_g.data<scalar_t>(),
                                     value.data<scalar_t>() + n * im2col_step_ * per_value_size,

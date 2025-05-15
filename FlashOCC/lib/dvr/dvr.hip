@@ -369,7 +369,7 @@ std::vector<torch::Tensor> render_forward_cuda(
         exit(1);
     }
 
-    AT_DISPATCH_FLOATING_TYPES(sigma.type(), "render_forward_cuda", ([&] {
+    AT_DISPATCH_FLOATING_TYPES(sigma.scalar_type(), "render_forward_cuda", ([&] {
                hipLaunchKernelGGL(( render_forward_cuda_kernel<scalar_t>), dim3(blocks), dim3(threads), 0, 0, 
                     sigma.packed_accessor32<scalar_t,5,torch::RestrictPtrTraits>(),
                     origin.packed_accessor32<scalar_t,3,torch::RestrictPtrTraits>(),
@@ -681,7 +681,7 @@ std::vector<torch::Tensor> render_cuda(
         exit(1);
     }
 
-    AT_DISPATCH_FLOATING_TYPES(sigma.type(), "render_cuda", ([&] {
+    AT_DISPATCH_FLOATING_TYPES(sigma.scalar_type(), "render_cuda", ([&] {
                hipLaunchKernelGGL(( render_cuda_kernel<scalar_t>), dim3(blocks), dim3(threads), 0, 0, 
                     sigma.packed_accessor32<scalar_t,5,torch::RestrictPtrTraits>(),
                     origin.packed_accessor32<scalar_t,3,torch::RestrictPtrTraits>(),
@@ -734,7 +734,7 @@ torch::Tensor init_cuda(
     const dim3 blocks((M + threads - 1) / threads, N);
 
     // initialize occupancy such that every voxel with one or more points is occupied
-    AT_DISPATCH_FLOATING_TYPES(points.type(), "init_cuda", ([&] {
+    AT_DISPATCH_FLOATING_TYPES(points.scalar_type(), "init_cuda", ([&] {
                hipLaunchKernelGGL(( init_cuda_kernel<scalar_t>), dim3(blocks), dim3(threads), 0, 0, 
                     points.packed_accessor32<scalar_t,3,torch::RestrictPtrTraits>(),
                     tindex.packed_accessor32<scalar_t,2,torch::RestrictPtrTraits>(),
