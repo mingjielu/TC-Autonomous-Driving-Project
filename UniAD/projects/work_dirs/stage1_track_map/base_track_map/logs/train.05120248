@@ -1,0 +1,282 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+projects.mmdet3d_plugin
+projects.mmdet3d_plugin
+projects.mmdet3d_plugin
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+projects.mmdet3d_plugin
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+projects.mmdet3d_plugin
+projects.mmdet3d_plugin
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+projects.mmdet3d_plugin
+projects.mmdet3d_plugin
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 257, in <module>
+    main()
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 123, in main
+    plg_lib = importlib.import_module(_module_path)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/__init__.py", line 5, in <module>
+    from .datasets.pipelines import (
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/__init__.py", line 1, in <module>
+    from .nuscenes_e2e_dataset import NuScenesE2EDataset
+  File "/mnt/raid0/liuji/UniAD/projects/mmdet3d_plugin/datasets/nuscenes_e2e_dataset.py", line 19, in <module>
+    from nuscenes.eval.tracking.evaluate import TrackingEval
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/evaluate.py", line 15, in <module>
+    from nuscenes.eval.tracking.algo import TrackingEvaluation
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/algo.py", line 28, in <module>
+    from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/nuscenes/eval/tracking/mot.py", line 13, in <module>
+    import motmetrics
+ModuleNotFoundError: No module named 'motmetrics'
+W0512 02:48:24.266000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 165 closing signal SIGTERM
+W0512 02:48:24.266000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 166 closing signal SIGTERM
+W0512 02:48:24.267000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 167 closing signal SIGTERM
+W0512 02:48:24.267000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 170 closing signal SIGTERM
+W0512 02:48:24.268000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 171 closing signal SIGTERM
+W0512 02:48:24.268000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 172 closing signal SIGTERM
+E0512 02:48:24.382000 34 site-packages/torch/distributed/elastic/multiprocessing/api.py:870] failed (exitcode: 1) local_rank: 3 (pid: 168) of binary: /opt/conda/envs/py_3.10/bin/python
+Traceback (most recent call last):
+  File "/opt/conda/envs/py_3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/py_3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./tools/train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-12_02:48:24
+  host      : hjbog-srdc-20.amd.com
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 169)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-12_02:48:24
+  host      : hjbog-srdc-20.amd.com
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 168)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

@@ -1,0 +1,186 @@
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/lib/python3.9/site-packages/networkx/__init__.py", line 114, in <module>
+    import networkx.generators
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/__init__.py", line 14, in <module>
+    from networkx.generators.intersection import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/intersection.py", line 13, in <module>
+    from networkx.algorithms import bipartite
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/__init__.py", line 16, in <module>
+    from networkx.algorithms.dag import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/dag.py", line 23, in <module>
+    from fractions import gcd
+ImportError: cannot import name 'gcd' from 'fractions' (/opt/conda/lib/python3.9/fractions.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/lib/python3.9/site-packages/networkx/__init__.py", line 114, in <module>
+    import networkx.generators
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/__init__.py", line 14, in <module>
+    from networkx.generators.intersection import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/intersection.py", line 13, in <module>
+    from networkx.algorithms import bipartite
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/__init__.py", line 16, in <module>
+    from networkx.algorithms.dag import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/dag.py", line 23, in <module>
+    from fractions import gcd
+ImportError: cannot import name 'gcd' from 'fractions' (/opt/conda/lib/python3.9/fractions.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/lib/python3.9/site-packages/networkx/__init__.py", line 114, in <module>
+    import networkx.generators
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/__init__.py", line 14, in <module>
+    from networkx.generators.intersection import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/intersection.py", line 13, in <module>
+    from networkx.algorithms import bipartite
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/__init__.py", line 16, in <module>
+    from networkx.algorithms.dag import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/dag.py", line 23, in <module>
+    from fractions import gcd
+ImportError: cannot import name 'gcd' from 'fractions' (/opt/conda/lib/python3.9/fractions.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/lib/python3.9/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/lib/python3.9/site-packages/networkx/__init__.py", line 114, in <module>
+    import networkx.generators
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/__init__.py", line 14, in <module>
+    from networkx.generators.intersection import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/generators/intersection.py", line 13, in <module>
+    from networkx.algorithms import bipartite
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/__init__.py", line 16, in <module>
+    from networkx.algorithms.dag import *
+  File "/opt/conda/lib/python3.9/site-packages/networkx/algorithms/dag.py", line 23, in <module>
+    from fractions import gcd
+ImportError: cannot import name 'gcd' from 'fractions' (/opt/conda/lib/python3.9/fractions.py)
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 152) of binary: /opt/conda/bin/python
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/lib/python3.9/site-packages/torch/distributed/run.py", line 766, in <module>
+    main()
+  File "/opt/conda/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/conda/lib/python3.9/site-packages/torch/distributed/run.py", line 762, in main
+    run(args)
+  File "/opt/conda/lib/python3.9/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/opt/conda/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/opt/conda/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 246, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./tools/train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-04-18_09:46:37
+  host      : hjbog-srdc-20.amd.com
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 153)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-04-18_09:46:37
+  host      : hjbog-srdc-20.amd.com
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 154)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-04-18_09:46:37
+  host      : hjbog-srdc-20.amd.com
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 155)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-18_09:46:37
+  host      : hjbog-srdc-20.amd.com
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 152)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

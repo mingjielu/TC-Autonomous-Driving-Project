@@ -1,0 +1,269 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/mmopenlab/mmcv/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+Traceback (most recent call last):
+  File "/mnt/raid0/liuji/UniAD/./tools/train.py", line 19, in <module>
+    from mmdet3d.datasets import build_dataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/__init__.py", line 4, in <module>
+    from .custom_3d import Custom3DDataset
+  File "/mmopenlab/mmdetection3d/mmdet3d/datasets/custom_3d.py", line 10, in <module>
+    from ..core.bbox import get_box_type
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/__init__.py", line 8, in <module>
+    from .visualizer import *  # noqa: F401, F403
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/__init__.py", line 2, in <module>
+    from .show_result import (show_multi_modality_result, show_result,
+  File "/mmopenlab/mmdetection3d/mmdet3d/core/visualizer/show_result.py", line 6, in <module>
+    import trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/__init__.py", line 14, in <module>
+    from .base import Trimesh
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/base.py", line 15, in <module>
+    from . import poses
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trimesh/poses.py", line 7, in <module>
+    import networkx as nx
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/__init__.py", line 100, in <module>
+    import networkx.classes.filters
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/__init__.py", line 1, in <module>
+    from .graph import Graph
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/networkx/classes/graph.py", line 23, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (/opt/conda/envs/py_3.10/lib/python3.10/collections/__init__.py)
+W0512 02:54:41.572000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 446 closing signal SIGTERM
+W0512 02:54:41.573000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 447 closing signal SIGTERM
+W0512 02:54:41.573000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 449 closing signal SIGTERM
+W0512 02:54:41.573000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 450 closing signal SIGTERM
+W0512 02:54:41.574000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 451 closing signal SIGTERM
+W0512 02:54:41.574000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 452 closing signal SIGTERM
+W0512 02:54:41.574000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:898] Sending process 453 closing signal SIGTERM
+E0512 02:54:41.688000 315 site-packages/torch/distributed/elastic/multiprocessing/api.py:870] failed (exitcode: 1) local_rank: 2 (pid: 448) of binary: /opt/conda/envs/py_3.10/bin/python
+Traceback (most recent call last):
+  File "/opt/conda/envs/py_3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/py_3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./tools/train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-12_02:54:41
+  host      : hjbog-srdc-20.amd.com
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 448)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
