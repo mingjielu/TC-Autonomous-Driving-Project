@@ -10,7 +10,7 @@ GPUS=$2                                              #
 GPUS_PER_NODE=$(($GPUS<8?$GPUS:8))
 NNODES=`expr $GPUS / $GPUS_PER_NODE`
 
-MASTER_PORT=${MASTER_PORT:-28592}
+MASTER_PORT=${MASTER_PORT:-28596}
 MASTER_ADDR=${MASTER_ADDR:-"127.0.0.1"}
 RANK=${RANK:-0}
 

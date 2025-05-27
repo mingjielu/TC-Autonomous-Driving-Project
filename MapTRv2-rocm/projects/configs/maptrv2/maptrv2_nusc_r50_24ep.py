@@ -249,8 +249,8 @@ test_pipeline = [
 ]
 
 data = dict(
-    samples_per_gpu=40, #4
-    workers_per_gpu=10, #4 TODO
+    samples_per_gpu=4,
+    workers_per_gpu=4, # TODO
     train=dict(
         type=dataset_type,
         data_root=data_root,
