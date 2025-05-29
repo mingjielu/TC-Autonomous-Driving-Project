@@ -52,7 +52,7 @@ if __name__ == "__main__":
                 module=".",
                 sources=[
                     f"src/deformable_aggregation.cpp",
-                    f"src/deformable_aggregation_cuda.cu",
+                    f"src/deformable_aggregation_hip_cuda.cu",
                 ],
             ),
         ],

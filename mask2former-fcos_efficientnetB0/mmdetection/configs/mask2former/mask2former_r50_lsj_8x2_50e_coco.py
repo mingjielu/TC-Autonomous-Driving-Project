@@ -1,4 +1,8 @@
 _base_ = ['./mask2former_r50_lsj_8x2_50e_coco-panoptic.py']
+
+dataset_type = 'CocoDataset'
+data_root = '' # your coco data root
+
 num_things_classes = 80
 num_stuff_classes = 0
 num_classes = num_things_classes + num_stuff_classes
@@ -55,8 +59,6 @@ test_pipeline = [
             dict(type='Collect', keys=['img']),
         ])
 ]
-dataset_type = 'CocoDataset'
-data_root = 'data/coco/'
 data = dict(
     _delete_=True,
     samples_per_gpu=2,
@@ -77,3 +79,11 @@ data = dict(
         img_prefix=data_root + 'val2017/',
         pipeline=test_pipeline))
 evaluation = dict(metric=['bbox', 'segm'])
+
+lr_config = dict(
+    policy='step',
+    warmup='constant',
+    warmup_iters=500,
+    warmup_ratio=1.0 / 3,
+    step=[8, 11])
+runner = dict(type='EpochBasedRunner', max_epochs=120)

@@ -7,9 +7,14 @@
 from typing import Optional
 
 import torch
-from pytorch_lightning.metrics.metric import Metric
-from pytorch_lightning.metrics.functional.classification import stat_scores_multiple_classes
-from pytorch_lightning.metrics.functional.reduction import reduce
+try:
+   from pytorch_lightning.metrics.metric import Metric
+   from pytorch_lightning.metrics.functional.classification import stat_scores_multiple_classes
+   from pytorch_lightning.metrics.functional.reduction import reduce
+except:
+   from torchmetrics import Metric
+   from torchmetrics.functional.classification import stat_scores as stat_scores_multiple_classes
+   from torchmetrics.utilities import reduce
 
 class IntersectionOverUnion(Metric):
     """Computes intersection-over-union."""

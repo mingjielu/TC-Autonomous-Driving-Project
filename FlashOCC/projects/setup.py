@@ -68,9 +68,9 @@ if __name__ == '__main__':
                 sources=[
                     "src/bev_pooling.cpp",
                     "src/bev_sum_pool.cpp",
-                    "src/bev_sum_pool_cuda.cu",
+                    "src/bev_sum_pool_hip_cuda.cu",
                     "src/bev_max_pool.cpp",
-                    "src/bev_max_pool_cuda.cu",
+                    "src/bev_max_pool_hip_cuda.cu",
                 ],
             ),
             make_cuda_ext(
@@ -78,7 +78,7 @@ if __name__ == '__main__':
                 module="mmdet3d_plugin.ops.bev_pool_v2",
                 sources=[
                     "src/bev_pool.cpp",
-                    "src/bev_pool_cuda.cu"
+                    "src/bev_pool_hip_cuda.cu"
                 ],
             ),
             make_cuda_ext(
@@ -86,7 +86,7 @@ if __name__ == '__main__':
                 module="mmdet3d_plugin.ops.nearest_assign",
                 sources=[
                     "src/nearest_assign.cpp",
-                    "src/nearest_assign_cuda.cu"
+                    "src/nearest_assign_hip_cuda.cu"
                 ],
             ),
         ],

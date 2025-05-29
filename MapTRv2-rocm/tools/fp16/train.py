@@ -260,7 +260,7 @@ def main():
         model,
         datasets,
         cfg,
-        eval_model=eval_model,
+        # eval_model=eval_model,
         distributed=distributed,
         validate=(not args.no_validate),
         timestamp=timestamp,
@@ -268,4 +268,5 @@ def main():
 
 
 if __name__ == '__main__':
+    torch.multiprocessing.set_start_method('fork')
     main()
